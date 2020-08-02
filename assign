@@ -1,0 +1,112 @@
+#to include the files in the system we use 'require' module
+
+var fs = require('fs');
+
+# basic function 
+
+
+function add(a,b){
+    return a + b;
+}
+function sub(c,d){
+    return c-d;
+}
+function mul (e,f){
+    return e*f;
+}
+
+module.exports.add = add;
+module.exports.sub = sub;
+exports.mul=mul;
+
+#insering file in the file system
+
+var calci = require('./calci')
+
+result = calci.add(4, 5)
+res = calci.sub(10, 5)
+res1 = calci.mul(5,5)
+
+console.log("the output is" + result);
+console.log("the output is" + res);
+console.log("the output is" + res1)
+
+#using modules
+
+var fs = require('fs')
+
+#Reading a file
+
+fs.readFile('app.js','utf8',function(err,data){
+    console.log(data);
+});
+
+#if we have have write in that file
+fs.writeFile('calx.js','console.log("done")',function(err) {
+
+
+    console.log("file created");
+});
+
+#deleting a file
+fs.unlink('calx.js',function(err){
+    console.log("file has been deleted")
+    
+})
+
+
+#append module used to create a file if doesnt exist
+
+var fs = require('fs');
+
+fs.appendFile('calx.txt', 'Hello developers', function (err) {
+  if (err) throw err;
+  console.log(' file Saved successfully');
+});
+
+#open module to open a file 
+
+var fs = require('fs');
+
+fs.open('calx.txt', 'w', function (err, file) {
+  if (err) throw err;
+  console.log('Saved successfully');
+});
+
+# Node Modules in npm
+there are many modules in npm which includes
+
+#array-flattern
+#accept
+#body parser
+#byte
+#debug
+#destroy
+#express
+#uppercase
+and many other modules
+
+#to convert buffer to JSon
+#JSon() is used to return JSon object..
+
+var buf = Buffer.from ('pawan');
+
+console.log(buf.toJSON());
+
+#asyncronous methods and syncronous methods
+
+
+'use strict';
+
+module.exports = require('./lib/express');
+
+#basic sysntax
+
+async function name(params) {
+  const result = await waitforfunction()
+}
+
+
+
+
+
