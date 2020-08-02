@@ -106,6 +106,16 @@ async function name(params) {
   const result = await waitforfunction()
 }
 
+var fs = require('fs');
+
+let data = "this is fine saturday";
+
+let sachin = "kohli is the best criceter in the world" + "he is also the best player in all formats"
+
+fs.writeFileSync('live.txt', data);
+fs.writeFileSync("testfilesync.js", sachin);
+console.log("file has been created successfull");
+console.log(fs.readFileSync('live.txt','utf8'));
 
 
 
